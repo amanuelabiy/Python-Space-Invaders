@@ -41,14 +41,14 @@ class Player:
                 bullet = pygame.Rect(self._ship_rect.x + (self._width//2), self._ship_rect.y + self._height, 10, 5)
                 self.bullets.append(bullet)
                 self.BULLET_SOUND.play()
-                print(self.bullets)
+                
 
 
     def handle_bullets(self):
         for bullet in self.bullets:
             if bullet.y <= 0:
                 self.bullets.remove(bullet)
-                print('Bullet Removed')
+                
             else:
                 bullet.y -= self.BULLET_VEL
 
