@@ -172,8 +172,7 @@ class Enemey:
                             player_bullets.remove(bullet) 
                             self._all_aliens[i][j][0] = None
                             self._all_aliens[i][j][1] = None
-                            if (self._all_aliens[i][j][0] == None and self._all_aliens[i][j][1] == None):
-                                print(f'alien at {i} and {j} is none')
+                            
                             return True
                     
 
@@ -196,7 +195,7 @@ class Enemey:
         for bullet in self.alien_bullets:
             if bullet.y >= game.HEIGHT:
                 self.alien_bullets.remove(bullet)
-                print('Bullet Removed')
+                
             else:
                 bullet.y += self.ALIEN_BULLET_VEL
 
