@@ -101,7 +101,7 @@ class Game:
 
         if self.player.check_collision_with_alien(self.enemy.alien_bullets):
             self.lives -= 1
-            print('Life Deduction')
+            
 
     def draw_score(self):
         player_score_text = self.SCORE_FONT.render("Score: " + str(self.score), 1, self._WHITE)
